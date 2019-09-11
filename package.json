@@ -1,0 +1,33 @@
+{
+  "name": "webbio-code-demo",
+  "version": "1.0.0",
+  "description": "Webbio code demo",
+  "main": "/frontend/app.js",
+  "scripts": {
+    "start": "npm run dev-server",
+    "build": "webpack",
+    "dev-server": "webpack-dev-server"
+  },
+  "author": "Martijn van der Heiden",
+  "proxy": "http://localhost:3001",
+  "dependencies": {
+    "@material-ui/core": "^4.2.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^0.28.11",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
+    "react-router-dom": "^4.2.2",
+    "style-loader": "^0.21.0",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.3.8",
+    "webpack-dev-server": "^3.1.3"
+  },
+  "devDependencies": {
+    "url-loader": "^1.0.1"
+  }
+}

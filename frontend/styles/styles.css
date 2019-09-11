@@ -1,0 +1,56 @@
+body {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    margin-block-start: 0;
+    margin: 2px 0;
+}
+
+.MuiGrid-item {
+    padding: 10px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #1565c0;
+}
+
+.iconbuttonsyle {
+    margin-left: -12px;
+    margin-right: 20px
+}
+
+.headertypoclass {
+    flex: 1;
+}
+
+.sidelistwrapper {
+    width: 250px;
+}
+
+.NavLinkItem {
+    max-width: 360px;
+}
+
+.innernavitem {
+    color: black !important;
+}
+
+.innernavitem h3 {
+    color: black !important;
+}
+
+.footer-container-box {
+    background-color: #f1f3f4;
+    height: 12vh;
+    text-align: center;
+    color: black;
+}
+
+.footer-container-box h1 {
+    color: rgba(0, 0, 0, 0.4);
+}

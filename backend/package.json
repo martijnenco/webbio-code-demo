@@ -1,0 +1,22 @@
+{
+  "name": "webbio-code-demo",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node app",
+    "watcher": "nodemon app",
+    "debug": "nodemon --inspect app"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "debug": "~2.6.9",
+    "express": "~4.16.0",
+    "great-circle": "^0.2.8",
+    "http-errors": "~1.6.2",
+    "morgan": "~1.9.0",
+    "node-geocoder": "^3.24.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.10"
+  }
+}
