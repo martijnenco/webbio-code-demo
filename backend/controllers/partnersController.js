@@ -30,7 +30,8 @@ module.exports = async (req, res) => {
       const newPartner = await Promise.all(partnerPromise);
       //Combine all the data
       for (let i = 0; i < partners.length; i++) {
-        partners[i].geocode = newPartner[i][0]
+        if (typeof newPartner[i][0] === 'undefined') throw new Error();
+        partners[i].geocode = newPartner[i][0];
       }
 
       /** Resolve to distances and filtering it */
@@ -45,9 +46,13 @@ module.exports = async (req, res) => {
       res.json({rows: partners, error: false})
     } catch (e) {
       if (e.name === 'HttpError') {
-        console.log("Internet is turned of, can't access the internet for coordinate resolving.");
+        console.error("Internet is turned of, can't access the internet for coordinate resolving.");
         res.setHeader('Content-Type', 'application/json');
         res.json({rows: [], error: true, message: "Most likely the internet of the server is turned of."})
+      } else if (e.name === 'Error') {
+        console.error("Some coordinates can't be found.");
+        res.setHeader('Content-Type', 'application/json');
+        res.json({rows: [], error: true, message: "Some coordinates can't be found."})
       } else {
         console.error(e)
       }
