@@ -22,6 +22,7 @@ module.exports = async (req, res) => {
         // Get all the coordinates promises for al the partners
       let partnerPromise = [];
       for (let i = 0; i < partners.length; i++) {
+        if (typeof partners[i].address === 'undefined') throw new Error();
         partnerPromise[i] = geocoder.geocode(`${partners[i].address.no} ${partners[i].address.street} ${partners[i].address.city} ${partners[i].address.country}`)
           .then(res => res)
       }

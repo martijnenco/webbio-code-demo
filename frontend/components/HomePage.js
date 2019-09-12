@@ -12,7 +12,10 @@ class Header extends React.Component {
   componentDidMount() {
     fetch("http://localhost:3001/api/partners")
       .then(response => response.json())
-      .then(data => this.setState({data: data.rows}))
+      .then(data => {
+        if (data.error) return alert(data.message);
+        return this.setState({data: data.rows})
+      })
       .catch(error => console.error(error))
   }
 
