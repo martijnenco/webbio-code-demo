@@ -128,10 +128,10 @@ export default function EnhancedTable(data) {
                 <TableRow
                   hover
                   tabIndex={-1}
-                  key={row.name}
+                  key={`${row.name}-${index}`}
                 >
                   <TableCell component="th" id={labelId} scope="row" padding="none">
-                    {row.name}
+                    {row.name || 'Undefined'}
                   </TableCell>
                   <TableCell align="left">{`${row.address.no} ${row.address.street}`}</TableCell>
                   <TableCell align="left">{row.address.city}</TableCell>

@@ -48,6 +48,8 @@ module.exports = async (req, res) => {
         console.log("Internet is turned of, can't access the internet for coordinate resolving.");
         res.setHeader('Content-Type', 'application/json');
         res.json({rows: [], error: true, message: "Most likely the internet of the server is turned of."})
+      } else {
+        console.error(e)
       }
     }
   } else {
