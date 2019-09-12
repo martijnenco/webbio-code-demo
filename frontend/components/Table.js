@@ -8,6 +8,9 @@ import TableSortLabel from '@material-ui/core/TableSortLabel';
 
 let rows = [];
 
+/**
+ * A compering function for the sorting
+ */
 function desc(a, b, orderBy) {
   if (b[orderBy] < a[orderBy]) {
     return -1;
@@ -18,6 +21,9 @@ function desc(a, b, orderBy) {
   return 0;
 }
 
+/**
+ * Sorting function that sorts the array according to a sorting function as 'cmp'
+ */
 function stableSort(array, cmp) {
   const stabilizedThis = array.map((el, index) => [el, index]);
   stabilizedThis.sort((a, b) => {
@@ -28,6 +34,9 @@ function stableSort(array, cmp) {
   return stabilizedThis.map(el => el[0]);
 }
 
+/**
+ * The 'cmp' function. The output can be flipped for ascending or descending.
+ */
 function getSorting(order, orderBy) {
   return order === 'desc' ? (a, b) => desc(a, b, orderBy) : (a, b) => -desc(a, b, orderBy);
 }

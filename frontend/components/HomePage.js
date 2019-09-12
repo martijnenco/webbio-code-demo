@@ -18,9 +18,7 @@ class Header extends React.Component {
 
   render() {
     return (
-      <div>
-        <EnhancedTable rows={this.state.data}/>
-      </div>
+      <EnhancedTable rows={this.state.data}/>
     );
   };
 }

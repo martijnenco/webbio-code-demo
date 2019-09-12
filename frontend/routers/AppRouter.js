@@ -6,11 +6,9 @@ import HomePage from '../components/HomePage';
 
 const AppRouter = () => (
   <BrowserRouter>
-    <div>
-      <Switch>
-        <PublicRoute path="/" component={HomePage} exact={true}/>
-      </Switch>
-    </div>
+    <Switch>
+      <PublicRoute path="/" component={HomePage} exact={true}/>
+    </Switch>
   </BrowserRouter>
 );
 
